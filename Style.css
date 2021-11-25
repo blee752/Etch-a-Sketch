@@ -8,7 +8,10 @@ body {
     justify-content: center;
     height:100vh;
     flex-direction: column;
+    background-color: rgb(212, 212,212);
+    font-family: "Helvetica Neue", sans-serif;
 }
+
 
 #main {
     border-style: solid;
@@ -29,10 +32,9 @@ body {
 
   }
 
-/*   .grid {
-    grid-template-rows: repeat(16, 1fr);
-    grid-template-columns: repeat(16, 1fr);
-  } */
+  .grid {
+    background-color: white;
+  }
 
   .header {
       display: flex;
@@ -51,6 +53,31 @@ body {
 }
 
 button {
-    font-size: 20px;
-    margin-bottom: 20px;
+    /* font-size: 20px; */
+    margin-bottom: 20px; 
+    background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-family: "Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+
+  width: auto;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+button:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(1);
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .01s;
 }

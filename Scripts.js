@@ -1,5 +1,5 @@
 
-
+const sizeText = document.querySelector('.size');
 const container = document.getElementById('main');
 
 function makeGrid (rows, cols) {
@@ -44,18 +44,34 @@ clearEffect.addEventListener('click', (e) => {
 function clearGrid () {
     const divsToClear = document.getElementById('main');
     divsToClear.replaceChildren();
-    /* while(divsToClear.firstChild) {
-        divsToClear.removeChild(divsToClear.firstChild);
-    } */
     makeGrid(rows,cols); 
 }
 
 
 const changeGrid = document.querySelector('.Change-Size');
 changeGrid.addEventListener('click', (e) => {
-    let size = prompt('Please enter the new grid size:');
+    let size = prompt('Please enter the new grid size (Max 100):');
     size = parseInt(size);
+    if (size > 100) {
+        size = checkInput(size);
+    } 
     rows = size;
     cols = size;
     clearGrid();
+    sizeText.innerText = `Grid Size: ${size}x${size}`;
+    
+
 });
+
+
+function checkInput (size) {
+    let inRange = false;
+    while (!inRange) {
+        size = prompt('Please enter a grid size under 100:');
+        size = parseInt(size);
+        if (size <= 100) {
+            inRange = true;
+        }
+    }
+    return size;
+}
