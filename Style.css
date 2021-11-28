@@ -28,9 +28,6 @@ body {
     --cols: 16;
 }
 
-.grid-item {
-
-  }
 
   .grid {
     background-color: white;
@@ -80,4 +77,8 @@ button:active {
   transform: scale(1);
   box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
   transition: box-shadow .01s;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 1);
 }
