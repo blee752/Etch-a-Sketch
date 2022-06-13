@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Etch-a-Sketch
 
 [Live Page](https://blee752.github.io/Etch-a-Sketch/Index.html)
